@@ -1,0 +1,145 @@
+Correlate Azure resource Usage and performance data with application configuration and performance data --> Azure Monitor Logs
+visualize the relationship between application components -->Azure Service Map
+Track requests and exceptions on a specific line of code within the application  --> Application Insights
+Analyze how many users return to application and often they select a particular dropdown value  -->Azure Activity Logs
+
+Section: Compute 
+
+cspsconfigtool  -->You have downloaded and installed the Microsoft Azure Site Recovery Unified Setup for migration of on-premises physical machines to Azure. Which command creates management accounts on the Configuration Server?
+
+az backup protection auto-enable-for-azurewl --> protect all existing unprotected databases and any database you will add later with a given policy?
+
+Azure Machine Sizig --> The number of potential vNICs is determined by the size
+
+"location": "[resourceGroup().location]"  --> ARM template to deploy new virtual machines into the same location as the specified resource group. Which statement must exist in your ARM template in the virtual machine resources section?
+
+You have failed over an on-premises virtual machine for migration to Azure. After verifying the failover completion on the Jobs page, what should you do next? --> Complete Migration 
+
+New-AzureRmResourceGroupDeployment --> used to deploy the ARM template
+
+Microsoft System Center Data Protection Manager (DPM) on-premises to backup various IT workloads. In addition to local storage, you plan to add Azure storage to your DPM configuration. What should be done to connect the DPM host to Azure? --> Download the Key Vault Cridentails 
+
+After deploying virtual machines to an Azure Availability Set, you attempt to deploy additional virtual machines using the portal, but the Availability Set does not show up as a selectable option. What is the most likely cause of the problem? --> The Availability Set is not in the same Azure location 
+
+Your organization uses custom software that employees interact with daily. You need to capture application-specific usage data within the Azure virtual machine where it runs. What should you do? --> use the custom script 
+
+What type of storage is used for virtual machine VHD files? -->Page Blobs
+
+Get-AzureRmLocation  --> show the availble virtual machine locations 
+
+What must be done prior to using the Get-AzureRmBackupJob PowerShell cmdlet? --> Vault context must be set
+
+You are configuring Azure Site Recovery for the migration of on-premises physical servers to Azure. Which on-premises component is required for migration --> Configuration server
+
+You are manually deploying Active Directory in an Azure VM on Subnet1. You need to join all VMs on Subnet1 to the Active Directory domain. Which Azure Virtual Network (VNet) setting must be changed --> DNS Servers
+
+Section: Storage 
+
+What storage option should you use when deploying an application, where you need a secondary read-only copy of your data that can be a day old? --> RA-GRS
+
+What tool must be used to prepare drives to ship to Azure for import? --> WAImportExport tool
+
+What metrics are available for configuring an alert's frequency in the Azure Recovery Services vault? --> Per alert and hourly digest
+
+What types of consistencies are available when restoring a backed up virtual machine? --> Crash, Application, File-System
+
+How would you grant access to a Storage account so that it can be explored using Azure Storage Explorer without giving subscription access or admin access? --> Generate an SAS Connection String
+
+You have a container that contains multiple blobs. You want to make sure that a person cannot get access to any blob without you assigning them access. What Public access level should you set on the container? -->Private
+
+One of your network architects designed an Azure File Sync solution that places the Azure FileShare and Azure FileSync in different resource groups in the same region. What should you do for this to work and why? -->Do nothing, the FileShare and FileSync do not need to be in the same Resource Group
+
+Your security team is worried about the drives being sent to Microsoft for import to Azure and wants to know how these drives are encrypted. What encryption key can you tell them is being used to protect the data? --> Bitlocker Key
+
+What tier of storage should you choose for data that is not accessed frequently, but must be available within 30 minutes?  --> Cool Tier
+
+What would prevent an on-premises system running Windows Server 2008 R2 from mounting an Azure File Share? -->The OS only supports SMB 2.1
+
+In an Azure Standard storage account, which components are included for calculating the UsedCapacity metric? --> Blob,file,queue,table 
+
+You created a file directly in your Azure file share, but you can't find it synced in the servers that belong to the sync group. What is the cause of this problem? --> The sync is not ready. The change detection job responsible for initiating the sync runs every 24 hours.
+
+What type of key allows you to grant non-administrative access to your storage account? -->Shared Access Signature key
+
+In order to create a new CDN endpoint, what must be deployed in the resource group? --> CDN Profile
+
+You enable Activity Log for your Azure subscription and expect it to keep logs for a week in a storage account. At the end of the week, you find that only the previous day's log was stored. What could be the problem? --> A retention policy was configured inadvertently for only one day instead of seven
+
+You created an Azure File Share called MyShare using PowerShell. When you attempt to connect to it from a Windows 10 desktop, you encounter the following error: "TCP Port 445 (Microsoft -ds: service) FILTERED". What is the most likely cause of this error? --> Port 445 is blocked between source computer and the destination.
+
+What could you do to permit access to storage resources without giving out your access keys? --> Use shared access signature.
+
+You are attempting to add an on-premises server to an Azure Sync group. You have installed the Agent on the server but, it does not appear in the list of servers to add. Which of the following is a likely cause? --> You have not registered the Agent in the FileSync
+
+What Operating System(s) is/are supported by Azure Storage Explorer? --> Windows, macOS, and Linux
+
+What targets are supported for Data Protection Manager (DPM) if it is deployed as a physical server or an on-premises virtual machine? --> Recovery Services vault, disk, and tape
+
+Which statement best describes an Azure sync group? -->  It defines the sync topology between a specific set of files on an Azure file share and one or more servers 
+
+You are attempting to re-install the Storage Sync agent on a Windows 2012 R2 file server. When you run the agent setup you get the error: "This server is already registered." How do you resolve this issue? --> Recall all tiered data, remove the server from the sync group and re-register it.
+
+You have just received the drives from Microsoft for an export job, but are unable to read them. What do you need to do in order to read the drives -->download Bitlocker keys from the portal
+
+Why should you choose Azure Files over Azure Blobs for an already written application? --> Application uses native file system APIs
+
+How many messages can you peek when using Azure Storage Explorer to view a storage queue? --> 32
+
+Where can you monitor jobs and alerts for Azure Backup? -->Recovery service Vault dashboard
+
+What should you do to backup files and folders using Azure Backup on Windows 10 client? --> Install Microsoft Azure Recovery Services Agent
+
+To use Azure Site Recovery, what resource type is required?-->Recovery service vault
+
+What protocols are appropriate to use when creating a SAS token for access to a blob that you want to be accessible via HTTP? --> HTTP/HTTPS
+
+What are the available access levels for a given container? --> Private3, Blob and container
+
+You created a container called "monthly_reports" in an Azure file share called "CorpReporting". Which Universal Naming Convention (UNC) path would you use to map to the shared location? --> \\corpreporting.file.core.windows.net\monthly_reports
+
+What does enabling a service endpoint for Azure Storage do? --> Restricts access to virtual networks only
+
+While performing a copy session, you lose power and the session is interrupted. How can you resume the copy? -->Restart WAImportExport tool and specify the drive's journal file 
+
+Which PowerShell command creates a new file share?--> $share = New-AzStorageShare -Name "logs" -Context $storageContext 
+
+What switch initiates preparing the drives for Import? --> PrepImport
+
+Section: Planning Microsoft Azure Infrastructure
+
+What service/resource type should you use if you want the traffic between your on-premises network and Azure VNet to go through a private connection? -->ExpressRoute
+
+You have a classic VPN configured on a production environment in Azure and you need to duplicate it on test environment. What is the easiest way to do it? --> Export the VPN Config file, edit the name and IPs in the config file then upload it to the test VPN
+
+Which service should you use if you want to experiment with an AI model and train it across large scale cluster? -->Azure Machine Learning Service
+
+You have a Data Lake Project and the size of the data is growing in an unexpected way. What should you do to troubleshoot this? --> Create an alert to notify the data analytics team.
+
+You have an application most employees only use on weekdays. You must always keep the application up and running and minimize cost. What should you do? --> Scale down the app on weekends.
+
+A customer is concerned about charges related to network bandwidth. How would you help them understand these charges? --> Configure alerting for the Virtual Network Gateway - Metric: Tunnel Egress Bytes, Aggregation: Sum
+
+You have a web application running in an Azure VM on HTTP Port 80. The customer needs to access the application with HTTPS without changing the IIS configuration for this site. What should you do? -->Use Application Gateway
+
+You have an application that stores files that need to be accessible via links shared through an email. What method should be used? --> Shared Access Signature
+
+Which service can be used to aggregate log data from both on-premises and your Azure environment? --> Log analytics
+
+You have a large number of files that need to be shared between virtual machines as a file share using SMB. What should you do? --> Azure Files
+
+You have a web application deployed in multiple Azure regions. Users will access the application from Australia, Europe and the USA. How do you connect the users to the closest instance for them? --> Traffic Manager
+
+You have an application that consists of backend and frontend services. Each layer is deployed to a set of virtual machines (VMs). You need to allow access between the VMs that exist in the same layer, but all VMs must exist in the same VNet. How can this be achieved? --> Assign VMs in the frontend layer to the subnet and the backend in another subnet
+
+You need to create a container in a storage account and upload some images to it. You will do that from a PC, but you don't have a permission to install any software. What should you do?  --> Use Azure portal
+
+Which menu item in the main blade for the virtual machine (VM) would you need to select to configure monitoring a VM's CPU utilization? -->Diagnostics Settings 
+
+Which service can be used to detect issues in a web application running on Azure App Service?  --> Application Insights
+
+Which access key allows users other than the Administrator to access an Azure Function? --> Function Key 
+
+DTU means --> Database Transaction Unit  
+
+Which service can be used to handle large-scale parallel and high performance computing -->Batch Service 
+
